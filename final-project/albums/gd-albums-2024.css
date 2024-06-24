@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#container{
+    background-image: url("src/background.png");
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    z-index: -5;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: lightgrey;
+    font-family: "Road Rage", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(2px + 2.5vw);
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(3deg);
+    }
+    25%{
+        transform: rotate(-4deg);
+    }
+    50%{
+        transform: rotate(3deg);
+    }
+    75%{
+        transform: rotate(-4deg);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+}
+
+.popout {
+    width: 4rem;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(34,34,34,.9);
+    transition: width 300ms;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.links{
+    display: flex;
+    height: 5rem;
+    color: black;
+    font-family: "Bahnschrift", sans-serif;
+    text-decoration: none;
+    margin: 1rem 0 2rem;
+}
+
+.label{
+    display: none;
+    margin-left: .5rem;
+    color: lightgrey;
+}
+
+.links svg{
+    min-width: 2rem;
+    max-width: 2rem;
+    margin: 0 1rem;
+    fill: lightgrey;
+}
+
+.popout:hover {
+    width: 17rem;
+}
+
+.popout:hover .links .svg2{
+    margin-left: -40px;
+}
+
+.popout:hover .links .svg1{
+    margin-left: -60px;
+}
+
+.popout:hover .links .svg3{
+    margin-left: -60px;
+}
+
+.popout:hover .links .svg4{
+    margin-left: -5px;
+}
+
+.popout:hover .links .svg5{
+    margin-left: -35px;
+}
+
+.popout:hover .label{
+    display: block;
+}
+
+.label:visited{
+    color: deeppink;
+}
+
+.label:hover {
+    color: hotpink;
+}
+
+main{
+    margin-left: 5.5rem;
+    border-left: 2px solid lightgrey;
+    height: 350vh;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 38%);
+    grid-template-rows: repeat(5, 25vw);
+    grid-gap: 1rem;
+    grid-auto-flow: column;
+    margin-left: 2vw;
+}
+
+
+.grid img{
+    max-width: 40%;
+}
+
+.item img{
+    float: left;
+    max-width: 30%;
+}
+
+.item p{
+    color: whitesmoke;
+    text-align: left;
+    float: left;
+    font-size: calc(2px + 1vw);
+    margin: 2vw 1vw;
+    font-family: 'Alegreya', serif;
+}
+
+
+.item{
+    width: 140%;
+}
+
+.item6, .item7, .item8, .item9, .item10{
+    margin-top: 20vw;
+    margin-left: 10vw;
+    color: whitesmoke;
+}
+
+.item a{
+    color: hotpink;
+    text-decoration: underline hotpink;
+}
+
+
+.item a:visited{
+    color: mediumpurple;
+    text-decoration: underline mediumpurple;
+}
+
+.item a:hover{
+    color: lightpink;
+    text-decoration: underline lightpink;
+}
+
+.item img:hover{
+    animation: shake 1s infinite ease-in-out;
+}
+
+footer a{
+    text-decoration: underline;
+}
+
+footer a:link{
+    color: blue;
+}
+
+footer a:visited{
+    color: darkblue;
+}
+
+footer a:hover{
+    color: lightblue;
+}
+
+footer{
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    color: whitesmoke;
+    font-size: calc(2px + 1vw);
+}
+
+footer p{
+    margin-left: 10vw;
+    width: 100%;
+}
+
+#time-date{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: calc(2px + 1vw);
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .grid {
+        grid-gap: 5rem;
+    }
+
+    .item6, .item7, .item8, .item9, .item10 {
+        margin-left: -8vw;
+        margin-top: 25vw;
+    }
+
+    footer p{
+        margin-left: 15vw;
+    }
+}
+    @media screen and (max-width: 520px) {
+        .item6, .item7, .item8, .item9, .item10 {
+            margin-top: 40vw;
+            margin-left: -15vw;
+        }
+
+        footer p{
+            margin-left: 20vw;
+        }
+    }
