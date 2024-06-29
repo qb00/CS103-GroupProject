@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#container{
+    background-image: url("src/background.png");
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    z-index: -5;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: lightgrey;
+    font-family: "Road Rage", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(2px + 2.5vw);
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(3deg);
+    }
+    25%{
+        transform: rotate(-4deg);
+    }
+    50%{
+        transform: rotate(3deg);
+    }
+    75%{
+        transform: rotate(-4deg);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+}
+
+.popout {
+    width: 4rem;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(34,34,34,.9);
+    transition: width 300ms;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.links{
+    display: flex;
+    height: 5rem;
+    color: black;
+    font-family: "Bahnschrift", sans-serif;
+    text-decoration: none;
+    margin: 1rem 0 2rem;
+}
+
+.label{
+    display: none;
+    margin-left: .5rem;
+    color: lightgrey;
+}
+
+.links svg{
+    min-width: 2rem;
+    max-width: 2rem;
+    margin: 0 1rem;
+    fill: lightgrey;
+}
+
+.popout:hover {
+    width: 17rem;
+}
+
+.popout:hover .links .svg2{
+    margin-left: -40px;
+}
+
+.popout:hover .links .svg1{
+    margin-left: -60px;
+}
+
+.popout:hover .links .svg3{
+    margin-left: -60px;
+}
+
+.popout:hover .links .svg4{
+    margin-left: -5px;
+}
+
+.popout:hover .links .svg5{
+    margin-left: -35px;
+}
+
+.popout:hover .label{
+    display: block;
+}
+
+.label:visited{
+    color: deeppink;
+}
+
+.label:hover {
+    color: hotpink;
+}
+
+nav{
+    z-index: 1;
+}
+
+body{
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*line-height: 1.5;*/
+    /*font-weight: 400;*/
+    color: deeppink;
+    background-color: white;
+    /*background-image: linear-gradient(315deg, white 0%, hotpink 74%);*/
+
+}
+
+.timeline-container {
+    font-family: "Bahnschrift", sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    border-left: 4px solid #222;
+    padding-left: 25px;
+}
+
+.timeline-container h2 {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: calc(2vh + 1vw);
+    margin: 0;
+    color: deeppink;
+    border-bottom: 1px solid #eee;
+}
+
+.timeline-container .event {
+    box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    margin: 48px 0;
+    line-height: 2;
+    cursor: pointer;
+    position: relative;
+    transition: all 500ms;
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    /*margin: auto;*/
+    display: block;
+}
+
+.timeline-container .event::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #000;
+    position: absolute;
+    left: -36px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    transition: all 500ms;
+}
+
+.timeline-container .event:hover {
+    box-shadow: 1px 6px 16px -1px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-container .event:hover::before {
+    background: hotpink;
+}
+
+.timeline-container .event .event-date {
+    position: absolute;
+    left: -115px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+main{
+    /*margin-left: 5.5rem;*/
+    /*border-left: 2px solid lightgrey;*/
+    height: 300vh;
+}
+
+
+
+
+footer a{
+    text-decoration: underline;
+}
+
+footer a:link{
+    color: blue;
+}
+
+footer a:visited{
+    color: darkblue;
+}
+
+footer a:hover{
+    color: lightblue;
+}
+
+footer{
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    color: whitesmoke;
+    font-size: calc(2px + 1vw);
+}
+
+footer p{
+    margin-left: 10vw;
+    width: 100%;
+}
+
+#time-date{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: calc(2px + 1vw);
+}
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
+
+
+    footer p{
+        margin-left: 15vw;
+    }
+}
+@media screen and (max-width: 520px) {
+
+    footer p{
+        margin-left: 20vw;
+    }
+}
+@media (max-width: 700px) {
+    .timeline-container {
+        max-width: 100%;
+        margin-left: 8px;
+    }
+
+    .timeline-container .event .event-date {
+        position: static;
+        margin-bottom: -20px;
+    }
+}
+
+
+
+
